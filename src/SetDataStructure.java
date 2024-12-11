@@ -42,5 +42,15 @@ public class SetDataStructure {
        boolean bo = hs.remove(100);
         System.out.println(bo ? "Data Removing is Successful" : "Data Removing is not Successful");
         System.out.println(hs);
+
+        TreeSet<Integer> ts = new TreeSet<Integer>();
+        ts.add(100);
+        ts.add(600);
+        ts.add(400);
+        ts.add(300);
+        ts.add(500);
+        ts.add(200);
+
+        System.out.println(ts);
     }
 }
