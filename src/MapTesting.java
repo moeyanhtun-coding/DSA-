@@ -8,7 +8,7 @@ public class MapTesting {
 //        HashMap<Integer, String> hm = new HashMap<Integer, String>();
         TreeMap<Integer, String> hm = new TreeMap<Integer, String>();
         hm.put(1, "A");
-        hm.put(21, "B");
+        hm.put(21 , "B");
         hm.put(3, "C");
         hm.put(1, "D");
 
