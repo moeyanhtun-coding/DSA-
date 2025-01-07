@@ -29,18 +29,23 @@ public class ExceptionTest3 {
         while (true) {
             try {
                 System.out.println("Enter Unit " + (i + 1) + " Mark - ");
-                int unitMark = sc.nextInt();
+                String input = sc.next();
+                int unitMark = Integer.parseInt(input);
+
                 if (unitMark <= 0 || unitMark > 100) {
                     throw new RuntimeException("Invalid Unit Mark. You Should Enter a Valid Mark (1-100)!");
                 }
+
                 marks[i] = unitMark;
                 break;
+            } catch (NumberFormatException e) {
+                System.err.println("Invalid input! Please enter a number between 1 and 100. Not String!");
+                sc.nextLine();
             } catch (RuntimeException e) {
                 System.err.println("Error: " + e.getMessage());
-                sc.nextLine();
+
             }
         }
-
     }
 
     static int AverageMarks() {
